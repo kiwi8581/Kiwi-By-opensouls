@@ -1,12 +1,22 @@
 {
   "name": "opensoul",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Kiwi - A crypto cat companion powered by Soul Engine",
+  "soul": {
+    "name": "kiwi",
+    "version": "1.0.0",
+    "organization": "opensoul",
+    "blueprint": "./soul/kiwi",
+    "framework": "@opensouls/engine"
+  },
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "soul:dev": "bunx @opensouls/cli dev",
+    "soul:push": "bunx @opensouls/cli push"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -25,5 +35,18 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.16",
     "typescript": "^5"
-  }
+  },
+  "keywords": [
+    "soul-engine",
+    "opensouls",
+    "ai",
+    "chatbot",
+    "crypto",
+    "nextjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opensouls/opensouls"
+  },
+  "license": "MIT"
 }

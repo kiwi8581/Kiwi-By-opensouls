@@ -137,7 +137,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="relative z-10 py-4 text-center">
         <p className="text-zinc-500 text-xs font-medium tracking-wide">
-          powered by <span className="text-violet-400">opensouls</span>
+          powered by <a href="https://github.com/opensouls/opensouls" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 transition-colors">Soul Engine</a>
         </p>
       </footer>
     </div>
