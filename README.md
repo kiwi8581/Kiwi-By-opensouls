@@ -1,6 +1,6 @@
 # Kiwi 🐱
 
-> A chill crypto cat companion built with Soul Engine
+> A chill British cat companion built with Open souls
 
 [![Built with Soul Engine](https://img.shields.io/badge/Built%20with-Soul%20Engine-7C3AED?style=flat-square)](https://github.com/opensouls/opensouls)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?style=flat-square)](https://nextjs.org)
