@@ -3,37 +3,31 @@
  * 
  * Generates Kiwi's internal thoughts and reflections.
  * These thoughts are not shown to the user but guide responses.
+ * 
+ * Note: This is a decorative Soul Engine structure.
  */
 
-import { createCognitiveStep, WorkingMemory, ChatMessageRoleEnum, indentNicely } from "@opensouls/engine";
+export interface WorkingMemory {
+  memories: Array<{ role: string; content: string }>;
+  soulName: string;
+}
 
-const internalMonologue = createCognitiveStep((instructions: string) => {
-  return {
-    command: ({ soulName }: WorkingMemory) => {
-      return {
-        role: ChatMessageRoleEnum.System,
-        content: indentNicely`
-          ## Internal Reflection for ${soulName}
-          
-          ${soulName} is reflecting internally about the conversation.
-          This reflection is private and helps guide the response.
-          
-          ## Instructions
-          ${instructions}
-          
-          ## Reflection Focus
-          - What is the user's current emotional state?
-          - What topics are they interested in?
-          - How can ${soulName} be most helpful?
-          - What's the best way to maintain good vibes?
-        `,
-      };
-    },
-    postProcess: async ({ memory, value }) => {
-      const reflection = value.toString();
-      return [memory, reflection];
-    },
-  };
-});
+export interface MonologueOptions {
+  model?: string;
+}
+
+/**
+ * Creates a cognitive step for internal reflection
+ */
+const internalMonologue = (
+  workingMemory: WorkingMemory,
+  instructions: string,
+  _options?: MonologueOptions
+): Promise<[WorkingMemory, string]> => {
+  // Decorative implementation - actual logic in API route
+  const reflection = `[Internal Monologue] Reflecting on: ${instructions.slice(0, 50)}...`;
+  
+  return Promise.resolve([workingMemory, reflection]);
+};
 
 export default internalMonologue;

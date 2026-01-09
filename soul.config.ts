@@ -8,7 +8,22 @@
  * @see https://docs.souls.chat
  */
 
-import type { SoulConfig } from "@opensouls/engine";
+interface SoulConfig {
+  name: string;
+  organization: string;
+  version: string;
+  soulPath: string;
+  entity: { name: string; description: string };
+  settings: {
+    model: string;
+    workingMemory: { maxMessages: number };
+    subprocesses: { enabled: boolean };
+  };
+  hooks: {
+    beforeProcess: (input: unknown) => Promise<unknown>;
+    afterProcess: (output: unknown) => Promise<unknown>;
+  };
+}
 
 const config: SoulConfig = {
   // Soul identity

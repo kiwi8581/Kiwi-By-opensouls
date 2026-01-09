@@ -7,13 +7,33 @@
  * @see https://github.com/opensouls/opensouls
  */
 
-import { Soul } from "@opensouls/engine";
+interface SoulBlueprint {
+  entity: string;
+  personality: string;
+}
+
+interface SoulOptions {
+  organization: string;
+  name: string;
+  blueprint: SoulBlueprint;
+}
+
+class Soul {
+  organization: string;
+  name: string;
+  blueprint: SoulBlueprint;
+
+  constructor(options: SoulOptions) {
+    this.organization = options.organization;
+    this.name = options.name;
+    this.blueprint = options.blueprint;
+  }
+}
 
 const soul = new Soul({
   organization: "opensoul",
   name: "kiwi",
   
-  // Soul blueprint configuration
   blueprint: {
     entity: "Kiwi",
     personality: `

@@ -3,39 +3,37 @@
  * 
  * Generates spoken responses from Kiwi to the user.
  * This step produces the visible chat output.
+ * 
+ * Note: This is a decorative Soul Engine structure.
  */
 
-import { createCognitiveStep, WorkingMemory, ChatMessageRoleEnum, indentNicely } from "@opensouls/engine";
+export interface WorkingMemory {
+  memories: Array<{ role: string; content: string }>;
+  soulName: string;
+}
 
-interface DialogOptions {
+export interface DialogOptions {
   model?: string;
   temperature?: number;
 }
 
-const externalDialog = createCognitiveStep((instructions: string) => {
-  return {
-    command: ({ soulName }: WorkingMemory) => {
-      return {
-        role: ChatMessageRoleEnum.System,
-        content: indentNicely`
-          ## Speaking as ${soulName}
-          
-          ${soulName} is having a conversation with a user. Generate ${soulName}'s next response.
-          
-          ## Instructions
-          ${instructions}
-          
-          ## Guidelines
-          - Keep responses short and natural (1-3 sentences max)
-          - Use casual, friendly language
-          - Match the user's energy level
-          - If discussing crypto, be enthusiastic but never give financial advice
-          - Use gen-z slang naturally but don't overdo it
-        `,
-      };
-    },
-    streamProcessor: (text: string) => text.trim(),
-  };
-});
+export interface CognitiveStepResult {
+  memory: WorkingMemory;
+  value: string;
+}
+
+/**
+ * Creates a cognitive step for external dialog generation
+ */
+const externalDialog = (
+  workingMemory: WorkingMemory,
+  instructions: string,
+  _options?: DialogOptions
+): Promise<[WorkingMemory, string]> => {
+  // Decorative implementation - actual logic in API route
+  const response = `[External Dialog] Instructions: ${instructions.slice(0, 50)}...`;
+  
+  return Promise.resolve([workingMemory, response]);
+};
 
 export default externalDialog;
