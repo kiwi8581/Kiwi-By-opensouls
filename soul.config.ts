@@ -4,7 +4,7 @@
  * Root configuration file for the Soul Engine.
  * Defines the soul's identity, capabilities, and runtime settings.
  * 
- * @see https://github.com/opensouls/opensouls
+ * @see https://github.com/kiwi8581/Kiwi-By-opensouls
  * @see https://docs.souls.chat
  */
 

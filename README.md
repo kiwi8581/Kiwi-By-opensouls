@@ -2,7 +2,7 @@
 
 > A chill crypto cat companion built with Soul Engine
 
-[![Built with Soul Engine](https://img.shields.io/badge/Built%20with-Soul%20Engine-7C3AED?style=flat-square)](https://github.com/opensouls/opensouls)
+[![Built with Soul Engine](https://img.shields.io/badge/Built%20with-Soul%20Engine-7C3AED?style=flat-square)](https://github.com/kiwi8581/Kiwi-By-opensouls)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?style=flat-square)](https://nextjs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
@@ -12,7 +12,7 @@ Kiwi is a friendly crypto cat that loves vibes and community. Chat with Kiwi abo
 
 ## Soul Architecture
 
-This project follows the [OpenSouls Soul Engine](https://github.com/opensouls/opensouls) pattern:
+This project follows the [OpenSouls Soul Engine](https://github.com/kiwi8581/Kiwi-By-opensouls) pattern:
 
 ```
 soul/
@@ -95,5 +95,5 @@ MIT - See [LICENSE](LICENSE) for details.
 ---
 
 <p align="center">
-  <sub>Built with ❤️ using <a href="https://github.com/opensouls/opensouls">Soul Engine</a></sub>
+  <sub>Built with ❤️ using <a href="https://github.com/kiwi8581/Kiwi-By-opensouls">Soul Engine</a></sub>
 </p>
